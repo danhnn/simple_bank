@@ -10,7 +10,10 @@ dropdb:
 init_migration:
 	migrate create -ext sql -dir db/migration -seq init_schema
 
-migrate:
+migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
-.PHONY: postgres dropdb createdb migrate
+migratedown:
+	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose down
+
+.PHONY: postgres dropdb createdb migrate migrateup migratedown
