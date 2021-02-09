@@ -22,4 +22,7 @@ sqlc:
 test:
 	go test -v -cover ./...
 
+clean_test:
+	go clean -testcache
+
 .PHONY: postgres dropdb createdb migrate migrateup migratedown sqlc test
