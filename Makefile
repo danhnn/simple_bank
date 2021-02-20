@@ -27,5 +27,8 @@ clean_test:
 
 access_docker_db:
 	docker exec -it postgres12 psql -U root -d simple_bank
-	
-.PHONY: postgres dropdb createdb migrate migrateup migratedown sqlc test
+
+server:
+	go run main.go
+
+.PHONY: postgres dropdb createdb migrate migrateup migratedown sqlc test server

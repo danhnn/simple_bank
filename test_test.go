@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"testing"
 	"time"
 )
 
-func main() {
+func TestTest(m *testing.T) {
 	results := make(chan int)
 	rand.Seed(time.Now().UnixNano())
 	j := 0
