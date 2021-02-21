@@ -31,4 +31,7 @@ access_docker_db:
 server:
 	go run main.go
 
-.PHONY: postgres dropdb createdb migrate migrateup migratedown sqlc test server
+mock:
+	mockgen -package mockdb -destination db/mock/store.go github.com/danhnn/simplebank/db/sqlc Store
+
+.PHONY: postgres dropdb createdb migrate migrateup migratedown sqlc test server mock
