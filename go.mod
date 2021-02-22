@@ -11,9 +11,7 @@ require (
 	github.com/lib/pq v1.9.0
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.7.0
-	github.com/techschool/simplebank v0.0.0-20210103154151-b9098858de2b
 	github.com/ugorji/go v1.2.4 // indirect
-	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirect
 	golang.org/x/sys v0.0.0-20210220050731-9a76102bfb43 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
